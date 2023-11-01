@@ -1,3 +1,5 @@
+alert("WE TESTINA");
+
 /*
 REGOLE
 - Tutte le risposte devono essere scritte in JavaScript
@@ -82,8 +84,17 @@ let name2 = "John";
 
 console.log(name1 === name2);
 
+let diseguaglianza;
+diseguaglianza = (name1.toLowerCase() === name2.toLowerCase()) ? "VERO" : "FALSO";
+console.log(diseguaglianza);
 
-let lowerName = name2.toLowerCase();
-console.log(name1 === lowerName); 
+console.log(name1.toLowerCase() === name2.toLowerCase());
+
+// metodo alternativa 
+/* let lowerName1 = name1.toLowerCase();
+let lowerName2 = name2.toLowerCase();
+
+console.log(lowerName2);
+console.log(lowerName1 === lowerName2);  */
 
 
