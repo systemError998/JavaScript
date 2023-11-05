@@ -6,7 +6,33 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function giveMeRandom (n) {       //n è il numero di elementi casuali da generare nell'array
+   n = prompt("Inserisci un numero che creo un array randomico")
+   var randArrayBox = [];         //Creo un array vuoto che immagazzinerà i numeri generati
+   for (i=0; i<n; i++) {                                     // ciclo che si ripete n volte
+       let randNum = Math.floor(Math.random() * 11);   //crea un numero random tra 0 e 1 con math random, lo moltiplica per 11 e lo arrotonda 
+       randArrayBox.push(randNum)             //pusho i numeri generati nel ciclo nell'array 
+   }                                                // quando i diventa n il ciclo si ferma 
+   return randArrayBox          // ritorno l'array generato con i numeri pushati all'interno
+} //FINE FUNZIONE
+
+let myArray = giveMeRandom();
+console.log(myArray);
+// console.log(giveMeRandom());                                 //richiamo sta sfaccimm e funzion 
+
+let sum = 0;
+function checkArray () {
+   for (let i=0; i<myArray.length; i++) {
+      if (myArray[i]>5) {
+         console.log(myArray[i] + " è maggiore di 5");
+         sum = sum + myArray[i]
+         console.log(sum);
+      } else {console.log(myArray[i] + " non è maggiore 5");}
+   } 
+}
+console.log(checkArray()); */
+
+
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: 
@@ -14,26 +40,41 @@
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
 */
 
-shoppingCart = [
- {
-    price: 20
-    name: "vernice"
-    id: "vern"
-    quantity: 2
- }
- {
-    price: 20
-    name: "pennello"
-    id: "pennello"
-    quantity: 5
- }
- {
-    price: 10
-    name: cartVetr
-    id
-    quantity
- }
+/* let shoppingCart = [
+   {
+      price: 5,
+      name: "peppe",
+      id: "peppe",
+      quantity: 2 //10
+   },
+   {
+      price: 10,
+      name: "arca",
+      id: "arca",
+      quantity: 6 //50
+   },
+   {
+      price: 20,
+      name: "umby",
+      id: "umby",
+      quantity: 3 //60
+   }
 ]
+
+
+let total = 0;
+let total2 = 0;
+function shoppingCartTotal() {
+   for (let i=0; i<shoppingCart.length; i++) {
+
+      total = shoppingCart[i].price * shoppingCart[i].quantity
+      // console.log(total);
+      total2 += total
+   } return total2
+} 
+console.log(shoppingCartTotal()); */
+
+
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", 
@@ -42,31 +83,123 @@ shoppingCart = [
  ritorna il nuovo numero totale degli elementi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let shoppingCart = [
+   {
+      price: 5,
+      name: "peppe",
+      id: "peppe",
+      quantity: 2 //10
+   },
+   {
+      price: 10,
+      name: "arca",
+      id: "arca",
+      quantity: 6 //50
+   },
+   {
+      price: 20,
+      name: "umby",
+      id: "umby",
+      quantity: 3 //60
+   }
+]
+
+function addToShoppingCart () {
+   let obj = {
+      price: 5,
+      name: "pippo",
+      id: "pippo",
+      quantity: 2 //10
+   }
+   shoppingCart.push(obj)
+
+   return shoppingCart //  RETURN DEVE STARE DENTRO LA FUNZIONE
+}  
+
+console.log(addToShoppingCart());
+console.log("Il nuovo array è di " + shoppingCart.length + " elementi"); */
 
 /* EXTRA 4
- Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
- Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". 
+ Ognuno di questi oggetti ha le seguenti proprietà: 
+ "price", "name", "id" e "quantity".
+ Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e 
+ ritorna l'oggetto più costoso in esso contenuto.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* let shoppingCart = [
+   {
+      price: 5,
+      name: "peppe",
+      id: "peppe",
+      quantity: 2 //10
+   },
+   {
+      price: 10,
+      name: "arca",
+      id: "arca",
+      quantity: 6 //50
+   },
+   {
+      price: 20,
+      name: "umby",
+      id: "umby",
+      quantity: 3 //60
+   }
+]
+
+let max;
+function maxShoppingCart () {
+   for (let i=0; i<shoppingCart.length; i++) {
+      max = Math.max(shoppingCart[i].price)
+   } return max
+}
+
+console.log(maxShoppingCart()); */
 
 /* EXTRA 5
- Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: 
+ "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let shoppingCart = [
+   {
+      price: 5,
+      name: "peppe",
+      id: "peppe",
+      quantity: 2 //10
+   },
+   {
+      price: 10,
+      name: "arca",
+      id: "arca",
+      quantity: 6 //50
+   },
+   {
+      price: 20,
+      name: "umby",
+      id: "umby",
+      quantity: 3 //60
+   }
+]
+
+function latestShoppingCart () {
+   latestItem = shoppingCart.pop();
+   return latestItem;
+}
+console.log(latestShoppingCart());
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* EXTRA 7
-Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
+Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente 
+i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */

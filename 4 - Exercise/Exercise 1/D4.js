@@ -140,27 +140,14 @@ console.log(cutString()); */
  numeri casuali inclusi tra 0 e 10.
 */
 
-/* function giveMeRandom (rand) {
-    rand = Number(prompt("Inserisci un numero che ti creo un arraw randomico"))
-    let randArr= [];
-    for (let i=0; i<rand.lenght; i++)
-    let randNum = (Math.floor(Math.random(rand) * 11))
-    randArr.push(randNum)
-    return randArr
-}
-console.log(giveMeRandom()); */
-
-
-
-/* function giveMeRandom(x){
-    let numericaso=[];
-    for (var i = 0; i < x; i++){
-    let numeri= Math.floor(Math.random()*11);
-    numericaso.push(numeri);
-}
- return numericaso;
-}
-
-let random= giveMeRandom(10);
-console.log(random);   */
+function giveMeRandom (n) {       //n è il numero di elementi casuali da generare nell'array
+    n = prompt("Inserisci un numero che creo un array randomico")
+    let randArrayBox = [];         //Creo un array vuoto che immagazzinerà i numeri generati
+    for (i=0; i<n; i++) {                                     // ciclo che si ripete n volte
+        let randNum = Math.floor(Math.random() * 11);   //crea un numero random tra 0 e 1 con math random, lo moltiplica per 11 e lo arrotonda 
+        randArrayBox.push(randNum)             //pusho i numeri generati nel ciclo nell'array 
+    }                                                // quando i diventa n il ciclo si ferma 
+    return randArrayBox          // ritorno l'array generato con i numeri pushati all'interno
+} 
+console.log(giveMeRandom());                                 //richiamo sta sfaccimm e funzion 
 
